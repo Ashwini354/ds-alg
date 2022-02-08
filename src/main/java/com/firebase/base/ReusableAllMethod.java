@@ -49,7 +49,7 @@ public class ReusableAllMethod {
 
 	public static void clickOper(WebElement ele) {
 		ele.click();
-
+		System.out.println("pass: tex");
 	}
 
 	public static void enterText(WebElement element, String text) {
