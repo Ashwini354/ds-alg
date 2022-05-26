@@ -1,4 +1,5 @@
-/Users/ashwiniramamurthy/eclipse-workspace/SalesforsPom/src/main/java/com/salesforce/utility/PropertiesConfguration.java
-/Users/ashwiniramamurthy/eclipse-workspace/SalesforsPom/src/main/java/com/salesforce/utility/Constant.java
-/Users/ashwiniramamurthy/eclipse-workspace/SalesforsPom/src/main/java/com/salesforce/utility/GenerateReport.java
-/Users/ashwiniramamurthy/eclipse-workspace/SalesforsPom/src/main/java/com/firebase/base/ReusableAllMethod.java
+/Users/ashwiniramamurthy/eclipse-workspace/ds-alg/src/main/java/com/ds/utlity/GenerateReport.java
+/Users/ashwiniramamurthy/eclipse-workspace/ds-alg/src/main/java/com/ds/reusable/ReusableAllMethod.java
+/Users/ashwiniramamurthy/eclipse-workspace/ds-alg/src/main/java/com/ds/utlity/PropertiesConfguration.java
+/Users/ashwiniramamurthy/eclipse-workspace/ds-alg/src/main/java/com/ds/utlity/Constant.java
+/Users/ashwiniramamurthy/eclipse-workspace/ds-alg/src/main/java/com/ds/utlity/ReadingDataFromXl.java
