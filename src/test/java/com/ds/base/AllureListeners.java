@@ -30,7 +30,7 @@ public class AllureListeners implements ITestListener {
 
 	@Override
 	public void onStart(ITestContext context) {
-		System.out.println("am in onstart method" + context.getName());
+		System.out.println("Inside onStart method : " + context.getName());
 		context.setAttribute("WebDriver", BaseTest.getDriver());
 	}
 
@@ -38,19 +38,19 @@ public class AllureListeners implements ITestListener {
 	public void onFinish(ITestContext context) {
 
 		System.out.println();
-		System.out.println("am in onstart method" + context.getName());
+		System.out.println("Inside onFinish method : " + context.getName());
 
 	}
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		System.out.println("am in onTeststart method" + getTestMethodName(result) + "start");
+		System.out.println("Inside onTestStart method : " + getTestMethodName(result) + "start");
 
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		System.out.println("am in onTestsuccess method" + getTestMethodName(result) + "success");
+		System.out.println("Inside onTestSuccess method : " + getTestMethodName(result) + "success");
 
 	}
 
@@ -69,7 +69,7 @@ public class AllureListeners implements ITestListener {
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		System.out.println("am in onTestskipped method" + getTestMethodName(result) + "skipped");
+		System.out.println("Inside onTestSkipped method : " + getTestMethodName(result) + "skipped");
 
 	}
 }

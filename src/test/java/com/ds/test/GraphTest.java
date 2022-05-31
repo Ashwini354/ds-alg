@@ -27,24 +27,36 @@ public class GraphTest extends BaseTest{
 		loginPage.clickgetStarted();
 		report.logTestInfo("clicked get started");
 		signPage.clickSignin();
+		report.logTestInfo("signin button clicked");
 		String username=prop.getProperty("username");
 	
 		signPage.enterInteUsernameFeild(username);
+		report.logTestInfo("username entered");
 		String password=prop.getProperty("password");
 		signPage.enterIntePasswordFeild(password);
+		report.logTestInfo("password entered");
 		signPage.clickLogin();
+		report.logTestInfo("Login clicked");
 		homePage.clickGraphgetStarted();
 		report.logTestInfo("clicked linked list get started");
 		graphPage.clickGraph();
+		report.logTestInfo("Graph button clicked");
 		treePage.clickTreeTryHere();
+		report.logTestInfo("clicked try here button");
 	    treePage.enterIntoCodeTreeFeild(text);
+	    report.logTestInfo(prop.getProperty("phyon"));
 	    treePage.clickTreeRunIntro();
+	    report.logTestInfo(prop.getProperty("run"));
 	    treePage.navigate();
 	    
 	    graphPage.clickGraphRepresentation();
+	    report.logTestInfo("signin Representation button clicked");
 	    treePage.clickTreeTryHere();
+	    report.logTestInfo("clicked try here button");
 	    treePage.enterIntoCodeTreeFeild(text);
+	    report.logTestInfo(prop.getProperty("phyon"));
 	    treePage.clickTreeRunIntro();
+	    report.logTestInfo(prop.getProperty("run"));
 	    treePage.navigate();
 	}
 		

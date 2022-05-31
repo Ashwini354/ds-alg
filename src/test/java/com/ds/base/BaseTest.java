@@ -15,8 +15,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
@@ -54,26 +56,14 @@ public class BaseTest {
 		report.StartExtentReport();
 	}
 
-	public static WebDriver Launch(String element) {
-
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get(element);
-		tdriver.set(driver);
-		return getDriver();
-
-	}
-
 	@org.testng.annotations.Parameters({ "browser" })
-	@BeforeMethod
-	public WebDriver initialSetUp(String browserName, Method method) {
-		report.StartSingleTestReport(method.getName());
-		System.out.println("Before method is executing");
-		if (browserName.equalsIgnoreCase("chrome")) {
+	@BeforeClass
+	public void Launch(String browser) {
+		System.out.println("Before Calss is executing");
+		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-		} else if (browserName.equalsIgnoreCase("firefox")) {
+		} else if (browser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
@@ -86,11 +76,17 @@ public class BaseTest {
 		signPage = new SignIn(driver);
 		homePage = new HomePage(driver);
 		linkedList = new LinkedList(driver);
-		treePage=new TreePage(driver);
-		graphPage=new GraphPage(driver);
-		return getDriver();
+		treePage = new TreePage(driver);
+		graphPage = new GraphPage(driver);
 	}
 
+	 @org.testng.annotations.Parameters({ "browser" })
+	 @BeforeMethod
+	public void initialSetUp(String browserName,Method method) {
+		 System.out.println("Inside initialSetUp : "+method.getName());
+		report.StartSingleTestReport(method.getName());
+	}
+	
 	public static synchronized WebDriver getDriver() {
 		return tdriver.get();
 	}
@@ -111,8 +107,8 @@ public class BaseTest {
 			report.logTestPass();
 		} else if (result.getStatus() == ITestResult.FAILURE) {
 			report.logTestFail();
-
-			String path = takeScreenShot();
+			System.out.println("screen shot taken");
+            String path = takeScreenShot(result.getName());
 			try {
 				report.logger.addScreenCaptureFromPath(path);
 			} catch (IOException e) {
@@ -120,13 +116,18 @@ public class BaseTest {
 				e.printStackTrace();
 			}
 		}
+		
+	}
+	
+	@AfterClass
+	public void closeDriver() {
 		driver.quit();
 	}
 
-	public static String takeScreenShot() {
+	public static String takeScreenShot(String fileName) {
 		TakesScreenshot screen = ((TakesScreenshot) driver);
 		File src_file = screen.getScreenshotAs(OutputType.FILE);
-		String file_path = "/Users/ashwiniramamurthy/eclipse-workspace/ds-alg/firebase.jpg";
+		String file_path = "/Users/ashwiniramamurthy/eclipse-workspace/ds-alg/"+fileName+"ScreenShot.jpg";
 		File des_file = new File(file_path);
 		try {
 			FileUtils.copyFile(src_file, des_file);
@@ -134,7 +135,7 @@ public class BaseTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return "/Users/ashwiniramamurthy/eclipse-workspace/ds-alg/firebase.jpg";
+		return file_path;
 	}
 
 }

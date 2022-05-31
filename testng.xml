@@ -5,9 +5,9 @@
   <parameter name="browser" value="chrome"></parameter>
     <classes>
      <class name="com.ds.test.LoginTest"/>
-      <class name="com.ds.test.LinkedTest"/>
+      <class name="com.ds.test.LinkedTest"/>  
        <class name="com.ds.test.TreeTest"/>
-        <class name="com.ds.test.GraphTest"/>
+        <class name="com.ds.test.GraphTest"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

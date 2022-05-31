@@ -27,91 +27,147 @@ public class TreeTest extends BaseTest {
 		loginPage.clickgetStarted();
 		report.logTestInfo("clicked get started");
 		signPage.clickSignin();
+		report.logTestInfo("SignIn Button Clicked");
 		String username=prop.getProperty("username");
 	
 		signPage.enterInteUsernameFeild(username);
+		report.logTestInfo("username entered");
 		String password=prop.getProperty("password");
 		signPage.enterIntePasswordFeild(password);
+		report.logTestInfo("Password entered");
 		signPage.clickLogin();
+		report.logTestInfo("Login button clicked");
 		homePage.clickTreegetStarted();
 		report.logTestInfo("clicked linked list get started");
 		
 	    treePage.clickOverviewOfTree();
+	    report.logTestInfo("Overview of Tree button clicked");
 	    treePage.clickTreeTryHere();
+	    report.logTestInfo("clicked try here button");
 	    treePage.enterIntoCodeTreeFeild(text);
+	    report.logTestInfo(prop.getProperty("phyon"));
 	    treePage.clickTreeRunIntro();
+	    report.logTestInfo(prop.getProperty("run"));
 	    treePage.navigate();
 	    
 	    treePage.clickTreeTerminology();
+	    report.logTestInfo("Tree termilnology button clicked");
 	    treePage.clickTreeTryHere();
+	    report.logTestInfo("clicked try here button");
 	    treePage.enterIntoCodeTreeFeild(text);
+	    report.logTestInfo(prop.getProperty("phyon"));
 	    treePage.clickTreeRunIntro();
+	    report.logTestInfo(prop.getProperty("run"));
 	    treePage.navigate();
 	    
 	    treePage.clickTypesOfTree();
+	    report.logTestInfo("Types of tree button clicked");
 	    treePage.clickTreeTryHere();
+	    report.logTestInfo("clicked try here button");
 	    treePage.enterIntoCodeTreeFeild(text);
+	    report.logTestInfo(prop.getProperty("phyon"));
 	    treePage.clickTreeRunIntro();
+	    report.logTestInfo(prop.getProperty("run"));
 	    treePage.navigate();
 	    
 	    treePage.clickTreeTraversealt();
+	    report.logTestInfo("Tree Traversal button clicked");
 	    treePage.clickTreeTryHere();
+	    report.logTestInfo("clicked try here button");
 	    treePage.enterIntoCodeTreeFeild(text);
+	    report.logTestInfo(prop.getProperty("phyon"));
 	    treePage.clickTreeRunIntro();
+	    report.logTestInfo(prop.getProperty("run"));
 	    treePage.navigate();
 	    
 	    treePage.clickTreeIllustration();
+	    report.logTestInfo(" Tree illustration button clicked");
 	    treePage.clickTreeTryHere();
+	    report.logTestInfo("clicked try here button");
 	    treePage.enterIntoCodeTreeFeild(text);
+	    report.logTestInfo(prop.getProperty("phyon"));
 	    treePage.clickTreeRunIntro();
+	    report.logTestInfo(prop.getProperty("run"));
 	    treePage.navigate();
 	    
 	    treePage.clickBinaryTree();
+	    report.logTestInfo("Binary Tree button clicked");
 	    treePage.clickTreeTryHere();
+	    report.logTestInfo("clicked try here button");
 	    treePage.enterIntoCodeTreeFeild(text);
+	    report.logTestInfo(prop.getProperty("phyon"));
 	    treePage.clickTreeRunIntro();
+	    report.logTestInfo(prop.getProperty("run"));
 	    treePage.navigate();
 	    
 	    treePage.typesOfBinaryTree();
+	    report.logTestInfo("Types of Binary Tree button clicked");
 	    treePage.clickTreeTryHere();
+	    report.logTestInfo("clicked try here button");
 	    treePage.enterIntoCodeTreeFeild(text);
+	    report.logTestInfo(prop.getProperty("phyon"));
 	    treePage.clickTreeRunIntro();
+	    report.logTestInfo(prop.getProperty("run"));
 	    treePage.navigate();
 	    
 	    treePage.clickImplementaionInPhython();
+	    report.logTestInfo("Implentatiob In Phyton button clicked");
 	    treePage.clickTreeTryHere();
+	    report.logTestInfo("clicked try here button");
 	    treePage.enterIntoCodeTreeFeild(text);
+	    report.logTestInfo(prop.getProperty("phyon"));
 	    treePage.clickTreeRunIntro();
+	    report.logTestInfo(prop.getProperty("run"));
 	    treePage.navigate();
 	    
 	    treePage.clickBinaryTreeTraversal();
+	    report.logTestInfo("Tree traversal button clicked");
 	    treePage.clickTreeTryHere();
+	    report.logTestInfo("clicked try here button");
 	    treePage.enterIntoCodeTreeFeild(text);
+	    report.logTestInfo(prop.getProperty("phyon"));
 	    treePage.clickTreeRunIntro();
+	    report.logTestInfo(prop.getProperty("run"));
 	    treePage.navigate();
 	    
 	    treePage.clickImpleBinaryTree();
+	    report.logTestInfo("Impl Of Binary Tree button clicked");
 	    treePage.clickTreeTryHere();
+	    report.logTestInfo("clicked try here button");
 	    treePage.enterIntoCodeTreeFeild(text);
+	    report.logTestInfo(prop.getProperty("phyon"));
 	    treePage.clickTreeRunIntro();
+	    report.logTestInfo(prop.getProperty("run"));
 	    treePage.navigate();
 	    
 	    treePage.clickAppliBinaryTree();
+	    report.logTestInfo("Application of binary tree button clicked");
 	    treePage.clickTreeTryHere();
+	    report.logTestInfo("clicked try here button");
 	    treePage.enterIntoCodeTreeFeild(text);
+	    report.logTestInfo(prop.getProperty("phyon"));
 	    treePage.clickTreeRunIntro();
+	    report.logTestInfo(prop.getProperty("run"));
 	    treePage.navigate();
 	    
 	    treePage.clickBinarySearchTree();
+	    report.logTestInfo("Binary Search Tree button clicked");
 	    treePage.clickTreeTryHere();
+	    report.logTestInfo("clicked try here button");
 	    treePage.enterIntoCodeTreeFeild(text);
+	    report.logTestInfo(prop.getProperty("phyon"));
 	    treePage.clickTreeRunIntro();
+	    report.logTestInfo(prop.getProperty("run"));
 	    treePage.navigate();
 	    
 	    treePage.clickImpleBst();
+	    report.logTestInfo("Implementation of BST button clicked");
 	    treePage.clickTreeTryHere();
+	    report.logTestInfo("clicked try here button");
 	    treePage.enterIntoCodeTreeFeild(text);
+	    report.logTestInfo(prop.getProperty("phyon"));
 	    treePage.clickTreeRunIntro();
+	    report.logTestInfo(prop.getProperty("run"));
 	    treePage.navigate();
 	
 

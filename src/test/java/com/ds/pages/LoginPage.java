@@ -12,15 +12,14 @@ public class LoginPage extends ReusableAllMethod {
 
 	}
 
-	
 	@FindBy(xpath = "//button[@class='btn']")
 	WebElement get_started;
-	
 
-	
 	public void clickgetStarted() {
-	get_started.click();
+		if (get_started!=null && get_started.isDisplayed()) {
+			System.out.println(" clickgetStarted "+ get_started.isDisplayed()+" "+get_started.isEnabled());
+			get_started.click();
+		}
 	}
-	
 
 }
